@@ -1,0 +1,79 @@
+﻿<Application x:Class="SQL_Tutorial.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SQL_Tutorial"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Light"/>
+        </Style>
+
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Border Background="{TemplateBinding Background}"
+                CornerRadius="24"
+                BorderThickness="3"
+                BorderBrush="Green">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter Property="Background" Value="#FF0CFF00"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <Style x:Key="rbParagraph"  TargetType="{x:Type Paragraph}">
+            <Setter Property="Margin" Value="0"/>
+        </Style>
+
+        <Style x:Key="txtblockaanim" TargetType="TextBlock">
+            <Setter Property="Opacity" Value="1"/>
+            <Style.Triggers>
+                <Trigger Property="Opacity" Value="1">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard x:Name="SB">
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="00:00:00" Storyboard.TargetProperty="(TextBlock.FontSize)" Duration="00:00:02" From="0" To="24" AutoReverse="False"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <StopStoryboard BeginStoryboardName="SB"/>
+                    </Trigger.ExitActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key = "ButtonStyle" TargetType = "Button">
+            <Setter Property = "Background" Value = "Green" />
+            <Setter Property="Opacity" Value="0.65"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Width" Value="130"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Template" Value="{StaticResource ButtonTemplate}"/>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard x:Name="SB">
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="00:00:00" Storyboard.TargetProperty="(Button.FontSize)" Duration="00:00:00.30" From="20" To="22" AutoReverse="True" RepeatBehavior="Forever"/>
+                                <DoubleAnimation BeginTime="00:00:00" Storyboard.TargetProperty="(Button.Width)" Duration="00:00:00.30" From="130" To="120" AutoReverse="True" RepeatBehavior="Forever"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <StopStoryboard BeginStoryboardName="SB"/>
+                    </Trigger.ExitActions>
+                </Trigger>
+            </Style.Triggers>
+            
+        </Style>
+    </Application.Resources>
+</Application>

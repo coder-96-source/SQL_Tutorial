@@ -1,0 +1,230 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SQL_Tutorial.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Intro_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sehr geehrte Anwenderin, sehr geehrter Anwender,
+
+in diesem Tutorial werden Ihnen als neueinsteiger grundlegende Abfragen und Funktionen der Sprache SQL, Structured Query Language (strukturierte Abfragesprache), beigebracht. 
+
+Wir wünschen Ihnen viel spaß, und vorallem erfolg, beim Lesen der Lektionen, und Lösen der Aufgaben</Value>
+    </Setting>
+    <Setting Name="Lektion1_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Mit den Aggregatfunktionen kannst Du statistische Auswertungen numerischer Daten in einer Datenbank vornehmen. 
+Jede Aggregatfunktion wird auf ein Attribut einer Tabelle angewendet und liefert als Ergebnis einen Zahlenwert zurück.
+Es gibt die 6 Aggregatfunktionen AVG, MAX, MIN, SUM, COUNTund DISTINCT
+
+HINWEIS: Ohne die GROUP BY-Klausel kannst Du Aggregatfunktionen und die Auswahl von Attributen nicht mischen. Die folgende select-Anweisung liefert also einen Fehler:
+SELECT Artikelname, AVG(Einzelpreis) FROM Artikel
+
+DISTINCT (=engl. für eindeutig) Mit dem distinct-Operator sorgt man dafür, dass in der Ergebnistabelle keine Einträge mehrfach vorkommen. 
+
+SUM (=engl. für Summe)
+Dieser SQL-Befehl zählt die aus der Abfrage resultierenden Zahlenwerte (numerischen Werte) der Spalte zusammen, auf die er angewendet wird.
+
+COUNT (=engl. für Anzahl)
+Dieser Befehl zählt die Anzahl der von NULL verschiedenen Werte einer Spalte in der Ergebnistabelle. Alle Datensätze zählt man mit count(*). 
+Will man nur die verschiedenen Werte einer Spalte zählen, so benutzt man count(DISTINCT Spaltenname). 
+
+MAX() : MAXIMUM (engl. für Maximum)
+MIN() : MINIMUM (engl. für Minimum)
+Benutzt man diese Befehle, so erhält man die größte/kleinste Zahl, also das Maximum/Minimum der Spalte. 
+
+AVG() : AVERAGE (engl. für Mittelwert)
+Ähnlich wie MIN und MAX gibt uns AVG den Mittelwert (Durchschnitt) aller Zahlenwerte einer Spalte. Dabei werden alle Einträge addiert und dann durch die Anzahl der Einträge geteilt. </Value>
+    </Setting>
+    <Setting Name="Username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Jäckel</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Jäckel1234</Value>
+    </Setting>
+    <Setting Name="Ueberschrift" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SQL Tutorial</Value>
+    </Setting>
+    <Setting Name="L1_Aufgabe1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">gib den durschschnittlichen einzelpreis von allen artikeln aus</Value>
+    </Setting>
+    <Setting Name="L1_Aufgabe2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gib an wie viele Bestellungen die Firma United Package insgesamgt ausgeliefert hat</Value>
+    </Setting>
+    <Setting Name="L1_Aufgabe3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">gib die durchschnittlichen frachtkosten an</Value>
+    </Setting>
+    <Setting Name="L1_Aufgabe4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">gib alle Kunden aus, die bei dem lieferanten 'Exotic Liquids' mit einen mindestumsatz von 1000 bestellt haben</Value>
+    </Setting>
+    <Setting Name="Lektion2_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Arithmetische Operatoren führen mathematische Operationen für zwei Ausdrücke eines oder mehrerer Datentypen durch.
+ Sie werden von der numerischen Datentypkategorie aus ausgeführt.
+Operator                Bedeutung
++ (Addition) 	Addition
+- (Subtraktion) 	Subtraktion
+* (Multiplikation) 	Multiplikation
+/ (Dividieren) 	Division
+
+Mit den Operatoren Plus (+) und Minus (-) können auch arithmetische Operationen für datetime- und smalldatetime-Werte ausgeführt werden.
+z.B. Wir können BestellteEinheiten und Lagerbestand  zusammen addieren
+"SELECT (Lagerbestand+BestellteEinheiten) as Addition From Artikel"
+
+Das Datum von Heute bekommt man mit DATE()</Value>
+    </Setting>
+    <Setting Name="Lektion3_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Um Redundanzen beim Speichern zu vermeiden, werden die Informationen auf verschiedene Tabellen verteilt. Zur Erhaltung der logischen Zusammengehörigkeit werden Fremdschlüssel-Beziehungen zwischen den Tabellen aufgebaut.
+
+Muss das Datenbanksystem eine Anfrage verarbeiten, bei der Informationen aus mehreren Tabellen benötigt werden, ist es erforderlich die einzelnen Datensätze der Tabellen wieder zusammenzuführen. 
+Dadurch werden die ursprünglichen Informationen wiederhergestellt. Dies wird in SQL-Datenbanken mit Hilfe von SQL JOINS (Verbünden) umgesetzt. Mit einem SQL Join werden mehrere Tabellen verknüpft, die in einer Beziehung zueinander stehen.
+Hier z.B. Wir werden die Tabellen Bestellungen und Bestelldetails verbinden:
+"SELECT * FROM Bestellungen Inner Join Bestelldetails On Bestellungen.BestellNr=Bestelldetails.BestellNr"</Value>
+    </Setting>
+    <Setting Name="Lektion4_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">GROUP BY 
+
+Die Group By Funktion erweitert die aus Lektion 1 erlernten Aggregatfunktionen AVG(), SUM() etc.
+Mit Ihr kann man ergebnisse aus diesen, mit anderen tabellen in einer Select anweisung ausgeben
+
+zb: select LieferantenNr, avg(Einzelpreis) from Artikel group by LieferantenNr 
+</Value>
+    </Setting>
+    <Setting Name="Lektion5_Text" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Das ist das text von Fünf Zwei</Value>
+    </Setting>
+    <Setting Name="Lektion1_Titel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LEKTION 1</Value>
+    </Setting>
+    <Setting Name="Lektion2_Titel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LEKTION 2</Value>
+    </Setting>
+    <Setting Name="Lektion3_Titel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LEKTION 3</Value>
+    </Setting>
+    <Setting Name="Lektion4_Titel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LEKTION 4</Value>
+    </Setting>
+    <Setting Name="Lektion5_Titel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LEKTION 5</Value>
+    </Setting>
+    <Setting Name="L2_Aufgabe2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">subtrahiere den Mindestbestand vom Lagerbestand,
+bei welchen artikeln muss das lager aufgefüllt werden ? 
+</Value>
+    </Setting>
+    <Setting Name="L2_Aufgabe1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">gib an wie alt die einzelnen bestellungeen sind</Value>
+    </Setting>
+    <Setting Name="L2_Aufgabe3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">multipliziere alle Bestellte Artikel multipliziert mit deren Einzelpreis  </Value>
+    </Setting>
+    <Setting Name="L2_Aufgabe4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gib an wie viel rabatt(€) man durch den Rabatt(%) auf die einzelnen bestellungen in bestelldetails bekommt
+</Value>
+    </Setting>
+    <Setting Name="L3_Aufgabe1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gib das Bestelldatum und den dazugehörigen Einzelpreis an.
+</Value>
+    </Setting>
+    <Setting Name="L3_Aufgabe2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gib die Versandfirmen Namen und das Lieferdatum von deren Lieferungen an
+</Value>
+    </Setting>
+    <Setting Name="L3_Aufgabe3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gib die Artikelnamen und deren passende kategorienamen an</Value>
+    </Setting>
+    <Setting Name="L3_Aufgabe4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gib die Lieferantenfirmen und die Artikelnamen an, die sie Liefern</Value>
+    </Setting>
+    <Setting Name="L4_Aufgabe1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gib alle Firmen aus, und deren Durschschnittlichen Artikelpreis, ordne die ausgabe aufsteigend nach dem einzelpreis</Value>
+    </Setting>
+    <Setting Name="L4_Aufgabe2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gib den Durchschnittlichen Frachtkostenpreis für jedn kunden an, ordne die ausgabe aufsteigend nach kunden firma</Value>
+    </Setting>
+    <Setting Name="L4_Aufgabe3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Frage3 von L4</Value>
+    </Setting>
+    <Setting Name="L4_Aufgabe4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Frage4 von L4</Value>
+    </Setting>
+    <Setting Name="L5_Aufgabe1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Frage1 von L5</Value>
+    </Setting>
+    <Setting Name="L5_Aufgabe2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Frage2 von L5</Value>
+    </Setting>
+    <Setting Name="L5_Aufgabe3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Frage3 von L5</Value>
+    </Setting>
+    <Setting Name="L5_Aufgabe4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Frage4 von L5</Value>
+    </Setting>
+    <Setting Name="L1_Loesung1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT avg(Einzelpreis) AS avgEinzelpreis FROM Artikel</Value>
+    </Setting>
+    <Setting Name="L1_Loesung2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT count(bestellnr) AS insgesamt_ausgeliefert FROM versandfirmen INNER JOIN bestellungen ON versandfirmen.firmennr=bestellungen.versandüber WHERE firma='united package'</Value>
+    </Setting>
+    <Setting Name="L1_Loesung3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT avg(frachtkosten) AS frachtkosten FROM bestellungen</Value>
+    </Setting>
+    <Setting Name="L1_Loesung4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT a.artikelname, k.kategoriename FROM artikel a, kategorien k WHERE k.kategorienr=a.kategorienr ORDER BY k.kategoriename asc </Value>
+    </Setting>
+    <Setting Name="L2_Loesung1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">select bestellNr, DATE() - bestelldatum as Tage from bestellungen</Value>
+    </Setting>
+    <Setting Name="L2_Loesung2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Select artikelname From Artikel where (lagerbestand- mindestbestand) &lt;= 0 </Value>
+    </Setting>
+    <Setting Name="L2_Loesung3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Select Einzelpreis * Anzahl From Bestelldetails</Value>
+    </Setting>
+    <Setting Name="L2_Loesung4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Select bestellnr, (anzahl*Einzelpreis)*Rabatt as 'Rabatt(€)' From Bestelldetails Where Rabatt&gt;0 order by bestellnr</Value>
+    </Setting>
+    <Setting Name="L3_Loesung1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SELECT Bestelldatum,Einzelpreis From Bestellungen Inner Join Bestelldetails On Bestellungen.BestellNr=Bestelldetails.BestellNr</Value>
+    </Setting>
+    <Setting Name="L3_Loesung2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Select bestellNr, Firma, Lieferdatum From Versandfirmen Inner Join Bestellungen On Versandfirmen.FirmenNr=Bestellungen.versandÜber order by bestellnr</Value>
+    </Setting>
+    <Setting Name="L3_Loesung3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Select Kategoriename,Artikelname From Kategorien Inner Join Artikel On Kategorien.KategorieNr=Artikel.KategorieN</Value>
+    </Setting>
+    <Setting Name="L3_Loesung4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Select Firma,Artikelname From Lieferanten Inner Join Artikel On Lieferanten.LieferantenNr =Artikel.LieferantenNr</Value>
+    </Setting>
+    <Setting Name="L4_Loesung1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Select l.Firma, AVG(a.Einzelpreis) as avgEinzelpreis From Artikel a Inner Join Lieferanten l ON a.LieferantenNr=l.LieferantenNr Group By l.Firma order by avg(a.einzelpreis)</Value>
+    </Setting>
+    <Setting Name="L4_Loesung2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="L4_Loesung3" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="L4_Loesung4" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="L4_Loesung5" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="L5_Loesung1" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="L5_Loesung2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="L5_Loesung3" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="L5_Loesung4" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="L5_Loesung5" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DB_Path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">nordwind.accdb</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

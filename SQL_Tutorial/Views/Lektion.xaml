@@ -1,0 +1,24 @@
+﻿<Window x:Class="SQL_Tutorial.Views.Lektion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        WindowStartupLocation ="CenterScreen"
+        Title="Lektion" Height="450" Width="800">
+
+    <Grid Background="DarkGray" >
+        <ScrollViewer>
+            <StackPanel>
+                <TextBlock x:Name="Lektion_Ueberschrift" Text="LEKTION 1" Opacity="0.3" Foreground="Green" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="90" Height="129" Width="751"/>
+                <TextBlock x:Name="Lektion_Text" Style="{StaticResource TextBlockStyle}"  Margin="20, 0, 200, 80"/>
+            </StackPanel>
+        </ScrollViewer>
+        
+        <Button Name="AButton" Style="{StaticResource ButtonStyle}" Click="AButton_Click" Content="Aufagben" Margin="616,103,20,271"/>
+        <Button Name="LButton" Style="{StaticResource ButtonStyle}" Click="LButton_Click" Content="Lösungen" Margin="616,153,20,221"/>
+        <Button Name="Back" Style="{StaticResource ButtonStyle}" Click="Back_Click" Content="Zurück" Margin="10,364,627,10"/>
+
+        <Button Name="Database" Style="{StaticResource ButtonStyle}" Click="Database_Click" Content="ER Modell" Margin="616,239,20,135"/>
+    </Grid>
+</Window>

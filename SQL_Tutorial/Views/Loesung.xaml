@@ -1,0 +1,26 @@
+﻿<Window x:Class="SQL_Tutorial.Views.Loesung"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:buttonstyle="clr-namespace:SQL_Tutorial"
+        mc:Ignorable="d"
+        WindowStartupLocation ="CenterScreen"
+        Title="LÖSUNG" Height="450" Width="800">
+
+    <Grid Background="DarkGray" >
+
+        <TextBlock Name="Header" Opacity="0.3" Foreground="Green" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="90" Margin="0,-16,41,306" Height="129" Width="751"/>
+        <TextBlock Margin="32,118,545,279">Lösung 1:</TextBlock>
+        <TextBlock Name="L1" Style="{StaticResource TextBlockStyle}" Text="Lösung 1: SELECT * FROM * " Margin="134,118,41,251"/>
+        <TextBlock Name="L2" Style="{StaticResource TextBlockStyle}" Text="Lösung 2: SELECT * FROM * " Margin="134,173,41,191"/>
+        <TextBlock Name="L3" Style="{StaticResource TextBlockStyle}" Text="Lösung 3: SELECT * FROM * " Margin="134,233,41,130"/>
+        <TextBlock Name="L4" Style="{StaticResource TextBlockStyle}" Text="Lösung 4: SELECT * FROM * " Margin="134,294,10,68"/>
+
+        <Button Name="Back" Content="zurück" Style="{StaticResource ButtonStyle}" Click="Back_Click" Margin="10,364,627,10"/>
+        <TextBlock Margin="32,173,545,224"><Run Text="Lösung "/><Run Text="2"/><Run Text=":"/></TextBlock>
+        <TextBlock Margin="32,233,545,164"><Run Text="Lösung "/><Run Text="3"/><Run Text=":"/></TextBlock>
+        <TextBlock Margin="32,294,545,103"><Run Text="Lösung "/><Run Text="4"/><Run Text=":"/></TextBlock>
+
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="SQL_Tutorial.Views.Admin.Admin_login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        WindowStartupLocation ="CenterScreen"
+        Title="Admin Login" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../../Assets/background.jpg"/>
+        </Grid.Background>
+
+        <TextBlock Name="Überschrift" FontWeight="Bold" HorizontalAlignment="Center" FontSize="30" Margin="10,32,10,336">Admin</TextBlock>
+        <Label FontSize="18" Content="Benutzername" FontWeight="Bold" HorizontalAlignment="Center" Margin="296,110,296,24" Width="200"/>
+        <TextBox FontSize="18" x:Name="Username"  Width="200" Margin="296,139,296,241"/>
+        <Label FontSize="18" Content="Password" FontWeight="Bold" HorizontalAlignment="Center" Margin="296,178,296,-44" Width="200"/>
+        <PasswordBox FontSize="18" x:Name="Password"  Width="200" Margin="296,208,296,167"/>
+        <Button Content="Login" Click="Button_Click" Margin="296,275,296,99" Style="{StaticResource ButtonStyle}"/>
+        <Button Content="Back" Click="Button_Click_1" Margin="10,369,688,15" Style="{StaticResource ButtonStyle}" Height="35" Width="94"/>
+    </Grid>
+</Window>
