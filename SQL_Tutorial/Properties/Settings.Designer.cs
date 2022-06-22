@@ -71,7 +71,7 @@ Wir wünschen Ihnen viel spaß, und vorallem erfolg, beim Lesen der Lektionen, u
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Jäckel")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Admin")]
         public string Username {
             get {
                 return ((string)(this["Username"]));
@@ -83,7 +83,7 @@ Wir wünschen Ihnen viel spaß, und vorallem erfolg, beim Lesen der Lektionen, u
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Jäckel1234")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Admin")]
         public string Password {
             get {
                 return ((string)(this["Password"]));
