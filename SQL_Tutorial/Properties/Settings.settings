@@ -34,10 +34,10 @@ AVG() : AVERAGE (engl. für Mittelwert)
 Ähnlich wie MIN und MAX gibt uns AVG den Mittelwert (Durchschnitt) aller Zahlenwerte einer Spalte. Dabei werden alle Einträge addiert und dann durch die Anzahl der Einträge geteilt. </Value>
     </Setting>
     <Setting Name="Username" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Jäckel</Value>
+      <Value Profile="(Default)">Admin</Value>
     </Setting>
     <Setting Name="Password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Jäckel1234</Value>
+      <Value Profile="(Default)">Admin</Value>
     </Setting>
     <Setting Name="Ueberschrift" Type="System.String" Scope="User">
       <Value Profile="(Default)">SQL Tutorial</Value>
